@@ -1,1 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300&family=Montserrat:wght@100;400&family=Orbitron:wght@400;500&display=swap');
+/*     font-family: 'Martel Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Orbitron', sans-serif;*/
+html {
+    line-height : 1.15;
+    -webkit-text-size-adjust:100%;
+    background-color: black;
+}
+body{
+    margin:0;
+}
+main{
+    display:block;
+}
+h1 {
+    font-size:2em;
+    margin: 0.67em 0;  
+}
+a{
+    background-color:transparent;
 
+}
+button{
+    font-family:inherit;
+    font-size:100%;
+    line-height:1.15;
+    margin:0;
+    text-transform:none;
+}
+header{
+ grid-area:header;
+ top:0;
+ left:0;
+ right:0;
+height:70px;
+border-bottom: 1px white solid;
+}
+header *{
+    display:inline;
+   
+}
+header li{
+margin:1em;
+font-size:1em;
+display: inline;
+margin-right:1em;
+
+}
+.logo{
+    animation: wobble 2s ease 0s 1 normal forwards;
+ 
+}
+.logo:hover{
+    color:#C70039;
+}
+
+header li a{
+color:aliceblue;
+text-decoration:none;
+font-family: 'Montserrat', sans-serif;
+
+}
+ a:hover{
+    color:#C70039;
+}
+.container{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 0.5fr;
+    grid-template-areas: "header header header"
+                        "sidebar container1 img-container"
+                
+                        "container2 container2 container2";
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+
+
+}
+nav .logo{
+    color:aliceblue;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6em;
+    margin-left:0.6em;
+    margin-top:0.4em;
+   
+}
+.container1{
+    grid-area:container1;
+    z-index:999;
+}
+.container1 h1{
+    color:aliceblue;
+    font-family:'Montserrat', sans-serif;
+}
+.container1 h3{
+    color:aliceblue;
+    font-family:'Montserrat', sans-serif;
+}
+.sidebar{
+    grid-area:sidebar;
+}
+
+.img-container{
+    width:80%;
+    max-height:500px;
+    grid-area:img-container;
+   
+}
+.img1{
+    width:50%;
+    display:block;
+    height:auto;
+  
+}
+@keyframes wobble {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
